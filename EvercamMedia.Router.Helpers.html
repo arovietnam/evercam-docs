@@ -1,0 +1,2462 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.13.0">
+    <title>EvercamMedia.Router.Helpers – Evercam Media v1.0.1</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Evercam Media
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.1
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Evercam Media v1.0.1</small>
+        EvercamMedia.Router.Helpers
+        
+        
+          <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Module with named helpers generated from EvercamMedia.Router.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_path/2">archive_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_path/3">archive_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_path/4">archive_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_path/5">archive_path(conn_or_endpoint, action, id, archive_id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_url/2">archive_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_url/3">archive_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_url/4">archive_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#archive_url/5">archive_url(conn_or_endpoint, action, id, archive_id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_path/2">camera_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_path/3">camera_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_path/4">camera_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_path/3">camera_share_path(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_path/4">camera_share_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_request_path/3">camera_share_request_path(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_request_path/4">camera_share_request_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_request_url/3">camera_share_request_url(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_request_url/4">camera_share_request_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_url/3">camera_share_url(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_share_url/4">camera_share_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_url/2">camera_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_url/3">camera_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camera_url/4">camera_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cloud_recording_path/3">cloud_recording_path(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cloud_recording_path/4">cloud_recording_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cloud_recording_url/3">cloud_recording_url(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#cloud_recording_url/4">cloud_recording_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#log_path/3">log_path(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#log_path/4">log_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#log_url/3">log_url(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#log_url/4">log_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#motion_detection_path/3">motion_detection_path(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#motion_detection_path/4">motion_detection_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#motion_detection_url/3">motion_detection_url(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#motion_detection_url/4">motion_detection_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvif_path/4">onvif_path(conn_or_endpoint, action, service, operation)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvif_path/5">onvif_path(conn_or_endpoint, action, service, operation, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvif_url/4">onvif_url(conn_or_endpoint, action, service, operation)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvif_url/5">onvif_url(conn_or_endpoint, action, service, operation, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvifptz_path/3">onvifptz_path(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvifptz_path/4">onvifptz_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvifptz_path/5">onvifptz_path(conn_or_endpoint, action, id, preset_token, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvifptz_url/3">onvifptz_url(conn_or_endpoint, action, id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvifptz_url/4">onvifptz_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#onvifptz_url/5">onvifptz_url(conn_or_endpoint, action, id, preset_token, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#page_path/2">page_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#page_path/3">page_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#page_url/2">page_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#page_url/3">page_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#path/2">path(data, path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Generates the path information including any necessary prefix</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#public_path/2">public_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#public_path/3">public_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#public_url/2">public_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#public_url/3">public_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_path/2">snapshot_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_path/3">snapshot_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_path/4">snapshot_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_path/5">snapshot_path(conn_or_endpoint, action, id, timestamp, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_path/6">snapshot_path(conn_or_endpoint, action, id, year, month, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_path/7">snapshot_path(conn_or_endpoint, action, id, year, month, day, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_path/8">snapshot_path(conn_or_endpoint, action, id, year, month, day, hour, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/2">snapshot_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/3">snapshot_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/4">snapshot_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/5">snapshot_url(conn_or_endpoint, action, id, timestamp, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/6">snapshot_url(conn_or_endpoint, action, id, year, month, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/7">snapshot_url(conn_or_endpoint, action, id, year, month, day, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/8">snapshot_url(conn_or_endpoint, action, id, year, month, day, hour, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#static_path/2">static_path(conn, path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Generates path to a static asset given its file path</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#static_url/2">static_url(conn, path)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Generates url to a static asset given its file path</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_path/2">stream_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_path/3">stream_path(conn_or_endpoint, action, token)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_path/4">stream_path(conn_or_endpoint, action, token, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_path/5">stream_path(conn_or_endpoint, action, token, filename, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_url/2">stream_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_url/3">stream_url(conn_or_endpoint, action, token)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_url/4">stream_url(conn_or_endpoint, action, token, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#stream_url/5">stream_url(conn_or_endpoint, action, token, filename, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#url/1">url(data)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Generates the connection/endpoint base URL without any path information</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_path/2">user_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_path/3">user_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_path/4">user_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_url/2">user_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_url/3">user_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_url/4">user_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_model_path/2">vendor_model_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_model_path/3">vendor_model_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_model_path/4">vendor_model_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_model_url/2">vendor_model_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_model_url/3">vendor_model_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_model_url/4">vendor_model_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_path/2">vendor_path(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_path/3">vendor_path(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_path/4">vendor_path(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_url/2">vendor_url(conn_or_endpoint, action)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_url/3">vendor_url(conn_or_endpoint, action, params)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#vendor_url/4">vendor_url(conn_or_endpoint, action, id, params)</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="archive_path/2">
+  <div class="detail-header">
+    <a href="#archive_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="archive_path/3">
+  <div class="detail-header">
+    <a href="#archive_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="archive_path/4">
+  <div class="detail-header">
+    <a href="#archive_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="archive_path/5">
+  <div class="detail-header">
+    <a href="#archive_path/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_path(conn_or_endpoint, action, id, archive_id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="archive_url/2">
+  <div class="detail-header">
+    <a href="#archive_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="archive_url/3">
+  <div class="detail-header">
+    <a href="#archive_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="archive_url/4">
+  <div class="detail-header">
+    <a href="#archive_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="archive_url/5">
+  <div class="detail-header">
+    <a href="#archive_url/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">archive_url(conn_or_endpoint, action, id, archive_id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_path/2">
+  <div class="detail-header">
+    <a href="#camera_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_path/3">
+  <div class="detail-header">
+    <a href="#camera_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_path/4">
+  <div class="detail-header">
+    <a href="#camera_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_path/3">
+  <div class="detail-header">
+    <a href="#camera_share_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_path(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_path/4">
+  <div class="detail-header">
+    <a href="#camera_share_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_request_path/3">
+  <div class="detail-header">
+    <a href="#camera_share_request_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_request_path(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_request_path/4">
+  <div class="detail-header">
+    <a href="#camera_share_request_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_request_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_request_url/3">
+  <div class="detail-header">
+    <a href="#camera_share_request_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_request_url(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_request_url/4">
+  <div class="detail-header">
+    <a href="#camera_share_request_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_request_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_url/3">
+  <div class="detail-header">
+    <a href="#camera_share_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_url(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_share_url/4">
+  <div class="detail-header">
+    <a href="#camera_share_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_share_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_url/2">
+  <div class="detail-header">
+    <a href="#camera_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_url/3">
+  <div class="detail-header">
+    <a href="#camera_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="camera_url/4">
+  <div class="detail-header">
+    <a href="#camera_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">camera_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="cloud_recording_path/3">
+  <div class="detail-header">
+    <a href="#cloud_recording_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cloud_recording_path(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="cloud_recording_path/4">
+  <div class="detail-header">
+    <a href="#cloud_recording_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cloud_recording_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="cloud_recording_url/3">
+  <div class="detail-header">
+    <a href="#cloud_recording_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cloud_recording_url(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="cloud_recording_url/4">
+  <div class="detail-header">
+    <a href="#cloud_recording_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">cloud_recording_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="log_path/3">
+  <div class="detail-header">
+    <a href="#log_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">log_path(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="log_path/4">
+  <div class="detail-header">
+    <a href="#log_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">log_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="log_url/3">
+  <div class="detail-header">
+    <a href="#log_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">log_url(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="log_url/4">
+  <div class="detail-header">
+    <a href="#log_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">log_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="motion_detection_path/3">
+  <div class="detail-header">
+    <a href="#motion_detection_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">motion_detection_path(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="motion_detection_path/4">
+  <div class="detail-header">
+    <a href="#motion_detection_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">motion_detection_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="motion_detection_url/3">
+  <div class="detail-header">
+    <a href="#motion_detection_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">motion_detection_url(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="motion_detection_url/4">
+  <div class="detail-header">
+    <a href="#motion_detection_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">motion_detection_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvif_path/4">
+  <div class="detail-header">
+    <a href="#onvif_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvif_path(conn_or_endpoint, action, service, operation)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvif_path/5">
+  <div class="detail-header">
+    <a href="#onvif_path/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvif_path(conn_or_endpoint, action, service, operation, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvif_url/4">
+  <div class="detail-header">
+    <a href="#onvif_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvif_url(conn_or_endpoint, action, service, operation)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvif_url/5">
+  <div class="detail-header">
+    <a href="#onvif_url/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvif_url(conn_or_endpoint, action, service, operation, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvifptz_path/3">
+  <div class="detail-header">
+    <a href="#onvifptz_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvifptz_path(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvifptz_path/4">
+  <div class="detail-header">
+    <a href="#onvifptz_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvifptz_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvifptz_path/5">
+  <div class="detail-header">
+    <a href="#onvifptz_path/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvifptz_path(conn_or_endpoint, action, id, preset_token, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvifptz_url/3">
+  <div class="detail-header">
+    <a href="#onvifptz_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvifptz_url(conn_or_endpoint, action, id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvifptz_url/4">
+  <div class="detail-header">
+    <a href="#onvifptz_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvifptz_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="onvifptz_url/5">
+  <div class="detail-header">
+    <a href="#onvifptz_url/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">onvifptz_url(conn_or_endpoint, action, id, preset_token, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="page_path/2">
+  <div class="detail-header">
+    <a href="#page_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">page_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="page_path/3">
+  <div class="detail-header">
+    <a href="#page_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">page_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="page_url/2">
+  <div class="detail-header">
+    <a href="#page_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">page_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="page_url/3">
+  <div class="detail-header">
+    <a href="#page_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">page_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="path/2">
+  <div class="detail-header">
+    <a href="#path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">path(data, path)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Generates the path information including any necessary prefix.</p>
+
+  </section>
+</div>
+<div class="detail" id="public_path/2">
+  <div class="detail-header">
+    <a href="#public_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">public_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="public_path/3">
+  <div class="detail-header">
+    <a href="#public_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">public_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="public_url/2">
+  <div class="detail-header">
+    <a href="#public_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">public_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="public_url/3">
+  <div class="detail-header">
+    <a href="#public_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">public_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_path/2">
+  <div class="detail-header">
+    <a href="#snapshot_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_path/3">
+  <div class="detail-header">
+    <a href="#snapshot_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_path/4">
+  <div class="detail-header">
+    <a href="#snapshot_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_path/5">
+  <div class="detail-header">
+    <a href="#snapshot_path/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_path(conn_or_endpoint, action, id, timestamp, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_path/6">
+  <div class="detail-header">
+    <a href="#snapshot_path/6" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_path(conn_or_endpoint, action, id, year, month, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_path/7">
+  <div class="detail-header">
+    <a href="#snapshot_path/7" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_path(conn_or_endpoint, action, id, year, month, day, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_path/8">
+  <div class="detail-header">
+    <a href="#snapshot_path/8" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_path(conn_or_endpoint, action, id, year, month, day, hour, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/2">
+  <div class="detail-header">
+    <a href="#snapshot_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/3">
+  <div class="detail-header">
+    <a href="#snapshot_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/4">
+  <div class="detail-header">
+    <a href="#snapshot_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/5">
+  <div class="detail-header">
+    <a href="#snapshot_url/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(conn_or_endpoint, action, id, timestamp, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/6">
+  <div class="detail-header">
+    <a href="#snapshot_url/6" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(conn_or_endpoint, action, id, year, month, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/7">
+  <div class="detail-header">
+    <a href="#snapshot_url/7" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(conn_or_endpoint, action, id, year, month, day, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/8">
+  <div class="detail-header">
+    <a href="#snapshot_url/8" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(conn_or_endpoint, action, id, year, month, day, hour, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="static_path/2">
+  <div class="detail-header">
+    <a href="#static_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">static_path(conn, path)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Generates path to a static asset given its file path.</p>
+
+  </section>
+</div>
+<div class="detail" id="static_url/2">
+  <div class="detail-header">
+    <a href="#static_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">static_url(conn, path)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Generates url to a static asset given its file path.</p>
+
+  </section>
+</div>
+<div class="detail" id="stream_path/2">
+  <div class="detail-header">
+    <a href="#stream_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="stream_path/3">
+  <div class="detail-header">
+    <a href="#stream_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_path(conn_or_endpoint, action, token)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="stream_path/4">
+  <div class="detail-header">
+    <a href="#stream_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_path(conn_or_endpoint, action, token, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="stream_path/5">
+  <div class="detail-header">
+    <a href="#stream_path/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_path(conn_or_endpoint, action, token, filename, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="stream_url/2">
+  <div class="detail-header">
+    <a href="#stream_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="stream_url/3">
+  <div class="detail-header">
+    <a href="#stream_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_url(conn_or_endpoint, action, token)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="stream_url/4">
+  <div class="detail-header">
+    <a href="#stream_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_url(conn_or_endpoint, action, token, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="stream_url/5">
+  <div class="detail-header">
+    <a href="#stream_url/5" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">stream_url(conn_or_endpoint, action, token, filename, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="url/1">
+  <div class="detail-header">
+    <a href="#url/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">url(data)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Generates the connection/endpoint base URL without any path information.</p>
+
+  </section>
+</div>
+<div class="detail" id="user_path/2">
+  <div class="detail-header">
+    <a href="#user_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="user_path/3">
+  <div class="detail-header">
+    <a href="#user_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="user_path/4">
+  <div class="detail-header">
+    <a href="#user_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="user_url/2">
+  <div class="detail-header">
+    <a href="#user_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="user_url/3">
+  <div class="detail-header">
+    <a href="#user_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="user_url/4">
+  <div class="detail-header">
+    <a href="#user_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_model_path/2">
+  <div class="detail-header">
+    <a href="#vendor_model_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_model_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_model_path/3">
+  <div class="detail-header">
+    <a href="#vendor_model_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_model_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_model_path/4">
+  <div class="detail-header">
+    <a href="#vendor_model_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_model_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_model_url/2">
+  <div class="detail-header">
+    <a href="#vendor_model_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_model_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_model_url/3">
+  <div class="detail-header">
+    <a href="#vendor_model_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_model_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_model_url/4">
+  <div class="detail-header">
+    <a href="#vendor_model_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_model_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_path/2">
+  <div class="detail-header">
+    <a href="#vendor_path/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_path(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_path/3">
+  <div class="detail-header">
+    <a href="#vendor_path/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_path(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_path/4">
+  <div class="detail-header">
+    <a href="#vendor_path/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_path(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_url/2">
+  <div class="detail-header">
+    <a href="#vendor_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_url(conn_or_endpoint, action)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_url/3">
+  <div class="detail-header">
+    <a href="#vendor_url/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_url(conn_or_endpoint, action, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="vendor_url/4">
+  <div class="detail-header">
+    <a href="#vendor_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">vendor_url(conn_or_endpoint, action, id, params)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/router.ex#L-1" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-21f1a20b9e.js"></script>
+  </body>
+</html>
+

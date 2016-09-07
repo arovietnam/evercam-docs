@@ -1,0 +1,1193 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.13.0">
+    <title>Camera – Evercam Media v1.0.1</title>
+    <link rel="stylesheet" href="dist/app-9c1e3d5aa2.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+    <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Evercam Media
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v1.0.1
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Evercam Media v1.0.1</small>
+        Camera
+        
+        
+          <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#all/0">all()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#auth/1">auth(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#by_distance/3">by_distance(query \\ Camera, arg2, within_distance)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#by_exid/1">by_exid(exid)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#by_exid_with_associations/1">by_exid_with_associations(exid)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#changeset/2">changeset(camera, params \\ :invalid)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#count/1">count(query \\ Camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#delete_by_id/1">delete_by_id(camera_id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#delete_by_owner/1">delete_by_owner(owner_id)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#external_url/2">external_url(camera, protocol \\ &quot;http&quot;)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#for/2">for(user, bool)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get/1">get(exid)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_camera_info/1">get_camera_info(exid)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_full/1">get_full(exid)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_hls_url/1">get_hls_url(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_location/1">get_location(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_mac_address/1">get_mac_address(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_model_attr/2">get_model_attr(camera_full, attr)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_offset/1">get_offset(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_query_with_associations/1">get_query_with_associations(query)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_query_with_associations/3">get_query_with_associations(query, limit, offset)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_remembrance_camera/0">get_remembrance_camera()</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_rights/2">get_rights(camera, user)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_rtmp_url/1">get_rtmp_url(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_timezone/1">get_timezone(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_vendor_attr/2">get_vendor_attr(camera_full, attr)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#host/2">host(camera, network \\ &quot;external&quot;)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#internal_snapshot_url/2">internal_snapshot_url(camera, type \\ &quot;jpg&quot;)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#internal_url/2">internal_url(camera, protocol \\ &quot;http&quot;)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#invalidate_camera/1">invalidate_camera(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#invalidate_user/1">invalidate_user(user)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#is_owner?/2">is_owner?(user, camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#password/1">password(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#port/3">port(camera, network, protocol)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#public_cameras_query/2">public_cameras_query(coordinates, within_distance)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#recording?/1">recording?(camera_full)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#res_url/2">res_url(camera, type \\ &quot;jpg&quot;)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#rtsp_url/4">rtsp_url(camera, network \\ &quot;external&quot;, type \\ &quot;h264&quot;, include_auth \\ true)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#snapshot_url/2">snapshot_url(camera, type \\ &quot;jpg&quot;)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#username/1">username(camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#valid?/2">valid?(binary, value)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#validate_params/1">validate_params(camera_changeset)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#where_location_is_not_nil/1">where_location_is_not_nil(query \\ Camera)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#where_public_and_discoverable/1">where_public_and_discoverable(query \\ Camera)</a>
+  </div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="all/0">
+  <div class="detail-header">
+    <a href="#all/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">all()</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L38" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="auth/1">
+  <div class="detail-header">
+    <a href="#auth/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">auth(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L124" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="by_distance/3">
+  <div class="detail-header">
+    <a href="#by_distance/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">by_distance(query \\ Camera, arg2, within_distance)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L429" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="by_exid/1">
+  <div class="detail-header">
+    <a href="#by_exid/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">by_exid(exid)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L107" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="by_exid_with_associations/1">
+  <div class="detail-header">
+    <a href="#by_exid_with_associations/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">by_exid_with_associations(exid)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L113" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="changeset/2">
+  <div class="detail-header">
+    <a href="#changeset/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">changeset(camera, params \\ :invalid)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L441" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="count/1">
+  <div class="detail-header">
+    <a href="#count/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">count(query \\ Camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L393" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="delete_by_id/1">
+  <div class="detail-header">
+    <a href="#delete_by_id/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">delete_by_id(camera_id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L330" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="delete_by_owner/1">
+  <div class="detail-header">
+    <a href="#delete_by_owner/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">delete_by_owner(owner_id)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L324" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="external_url/2">
+  <div class="detail-header">
+    <a href="#external_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">external_url(camera, protocol \\ &quot;http&quot;)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L147" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="for/2">
+  <div class="detail-header">
+    <a href="#for/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">for(user, bool)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L69" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get/1">
+  <div class="detail-header">
+    <a href="#get/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get(exid)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L93" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_camera_info/1">
+  <div class="detail-header">
+    <a href="#get_camera_info/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_camera_info(exid)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L280" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_full/1">
+  <div class="detail-header">
+    <a href="#get_full/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_full(exid)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L99" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_hls_url/1">
+  <div class="detail-header">
+    <a href="#get_hls_url/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_hls_url(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L222" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_location/1">
+  <div class="detail-header">
+    <a href="#get_location/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_location(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L271" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_mac_address/1">
+  <div class="detail-header">
+    <a href="#get_mac_address/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_mac_address(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L264" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_model_attr/2">
+  <div class="detail-header">
+    <a href="#get_model_attr/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_model_attr(camera_full, attr)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L243" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_offset/1">
+  <div class="detail-header">
+    <a href="#get_offset/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_offset(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L257" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_query_with_associations/1">
+  <div class="detail-header">
+    <a href="#get_query_with_associations/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_query_with_associations(query)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L405" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_query_with_associations/3">
+  <div class="detail-header">
+    <a href="#get_query_with_associations/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_query_with_associations(query, limit, offset)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L413" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_remembrance_camera/0">
+  <div class="detail-header">
+    <a href="#get_remembrance_camera/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_remembrance_camera()</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L317" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_rights/2">
+  <div class="detail-header">
+    <a href="#get_rights/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_rights(camera, user)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L288" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_rtmp_url/1">
+  <div class="detail-header">
+    <a href="#get_rtmp_url/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_rtmp_url(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L213" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_timezone/1">
+  <div class="detail-header">
+    <a href="#get_timezone/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_timezone(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L250" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="get_vendor_attr/2">
+  <div class="detail-header">
+    <a href="#get_vendor_attr/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">get_vendor_attr(camera_full, attr)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L236" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="host/2">
+  <div class="detail-header">
+    <a href="#host/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">host(camera, network \\ &quot;external&quot;)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L193" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="internal_snapshot_url/2">
+  <div class="detail-header">
+    <a href="#internal_snapshot_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">internal_snapshot_url(camera, type \\ &quot;jpg&quot;)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L157" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="internal_url/2">
+  <div class="detail-header">
+    <a href="#internal_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">internal_url(camera, protocol \\ &quot;http&quot;)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L164" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="invalidate_camera/1">
+  <div class="detail-header">
+    <a href="#invalidate_camera/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">invalidate_camera(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L53" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="invalidate_user/1">
+  <div class="detail-header">
+    <a href="#invalidate_user/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">invalidate_user(user)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L47" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="is_owner?/2">
+  <div class="detail-header">
+    <a href="#is_owner?/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">is_owner?(user, camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L306" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="password/1">
+  <div class="detail-header">
+    <a href="#password/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">password(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L132" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="port/3">
+  <div class="detail-header">
+    <a href="#port/3" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">port(camera, network, protocol)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L197" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="public_cameras_query/2">
+  <div class="detail-header">
+    <a href="#public_cameras_query/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">public_cameras_query(coordinates, within_distance)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L399" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="recording?/1">
+  <div class="detail-header">
+    <a href="#recording?/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">recording?(camera_full)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L311" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="res_url/2">
+  <div class="detail-header">
+    <a href="#res_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">res_url(camera, type \\ &quot;jpg&quot;)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L174" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="rtsp_url/4">
+  <div class="detail-header">
+    <a href="#rtsp_url/4" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">rtsp_url(camera, network \\ &quot;external&quot;, type \\ &quot;h264&quot;, include_auth \\ true)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L201" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="snapshot_url/2">
+  <div class="detail-header">
+    <a href="#snapshot_url/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">snapshot_url(camera, type \\ &quot;jpg&quot;)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L136" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="username/1">
+  <div class="detail-header">
+    <a href="#username/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">username(camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L128" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="valid?/2">
+  <div class="detail-header">
+    <a href="#valid?/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">valid?(binary, value)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L351" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="validate_params/1">
+  <div class="detail-header">
+    <a href="#validate_params/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">validate_params(camera_changeset)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L336" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="where_location_is_not_nil/1">
+  <div class="detail-header">
+    <a href="#where_location_is_not_nil/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">where_location_is_not_nil(query \\ Camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L436" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="where_public_and_discoverable/1">
+  <div class="detail-header">
+    <a href="#where_public_and_discoverable/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">where_public_and_discoverable(query \\ Camera)</span>
+    
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/models/camera.ex#L423" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.13.0),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-21f1a20b9e.js"></script>
+  </body>
+</html>
+
