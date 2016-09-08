@@ -70,6 +70,11 @@
       </h1>
 
       
+        <section id="moduledoc" class="docstring">
+          <p>ArchiveController Module is being used to do all operations for Archives.</p>
+
+        </section>
+      
 
       
         <section id="summary" class="details-list">
@@ -102,6 +107,9 @@
   <div class="summary-signature">
     <a href="#index/2">index(conn, params)</a>
   </div>
+  
+    <div class="summary-synopsis"><p><code class="inline">GET &quot;/v1/cameras/:id/archives&quot;, ArchiveController, :index</code></p>
+</div>
   
 </div>
 <div class="summary-row">
@@ -150,7 +158,7 @@
     </a>
     <span class="signature">create(conn, params)</span>
     
-      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L46" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L87" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -168,7 +176,7 @@
     </a>
     <span class="signature">delete(conn, params)</span>
     
-      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L85" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L126" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -186,7 +194,7 @@
     </a>
     <span class="signature">index(conn, params)</span>
     
-      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L9" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L50" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -194,7 +202,32 @@
   </div>
   
   <section class="docstring">
-    
+    <p><code class="inline">GET &quot;/v1/cameras/:id/archives&quot;, ArchiveController, :index</code></p>
+<p><strong>index</strong> method is being used to enlist all archives of a given camera.</p>
+<p>This endpoint is going through auth. So It will work by sending an HTTP request with <code class="inline">API_KEY</code> and <code class="inline">API_ID</code>.</p>
+<h2>Example and Code Explanation</h2>
+<p><code class="inline">GET /v1/cameras/dexter/archives?api_key={Your_API_key}&amp;api_id={Your_API_id}</code></p>
+<p>The resulting object will be list which will contain all the archives of a given camera.</p>
+<pre><code class="elixir">{ &quot;archives&quot;:
+  [
+    { &quot;to_date&quot;: 1472716717,
+      &quot;title&quot;: &quot;A Day in Seattle&quot;,
+      &quot;status&quot;: &quot;Failed&quot;,
+      &quot;requester_name&quot;: &quot;Dexter Morgan&quot;,
+      &quot;requester_email&quot;: &quot;dexter@morgan.com&quot;,
+      &quot;requested_by&quot;: &quot;dexter&quot;,
+      &quot;public&quot;:false,
+      &quot;id&quot;:&quot;adayin-xc52&quot;,
+      &quot;from_date&quot;:1472715517,
+      &quot;frames&quot;:0,
+      &quot;embed_time&quot;:false,
+      &quot;created_at&quot;:1473068359,
+      &quot;camera_id&quot;:&quot;dexter&quot;
+    }
+  ]
+}</code></pre>
+<p><code class="inline">id</code> is being referred to <code class="inline">camera_id</code>. Your <code class="inline">API_KEY</code> and <code class="inline">API_ID</code> are being authenticated in <a href="EvercamMedia.Auth.html"><code class="inline">EvercamMedia.Auth</code></a> module. <code class="inline">current_user</code> is the person whom <code class="inline">API_KEY</code> and <code class="inline">API_ID</code> are present in <code class="inline">HTTP_REQUEST_URL</code></p>
+
   </section>
 </div>
 <div class="detail" id="pending_archives/2">
@@ -204,7 +237,7 @@
     </a>
     <span class="signature">pending_archives(conn, )</span>
     
-      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L69" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L110" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -222,7 +255,7 @@
     </a>
     <span class="signature">show(conn, params)</span>
     
-      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L27" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L68" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
@@ -240,7 +273,7 @@
     </a>
     <span class="signature">update(conn, params)</span>
     
-      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L57" class="view-source" rel="help" title="View Source">
+      <a href="https://github.com/evercam/evercam-media/blob/master/web/controllers/archive_controller.ex#L98" class="view-source" rel="help" title="View Source">
        <i class="icon-code"></i>
      </a>
     
